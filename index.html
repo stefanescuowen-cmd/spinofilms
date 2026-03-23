@@ -7,49 +7,60 @@
     <title>Spino Films</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+
+<header>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"><img src="images/logo-nobg.png" alt="SpinoFilms Logo"></div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
 
                 <li>
                     <a href="#">About ▾</a>
-                     <ul>
-                    <li><a href="about/about.html">About Us</a></li>
-                    <li><a href="about/team.html">Our Team</a></li>
-                    <li><a href="about/mission.html">Mission</a></li>
-                    <li><a href="about/history.html">History</a></li>
-            </ul>
-        </li>
+                    <ul>
+                        <li><a href="about/about.html">About Us</a></li>
+                        <li><a href="about/team.html">Our Team</a></li>
+                        <li><a href="about/mission.html">Mission</a></li>
+                        <li><a href="about/history.html">History</a></li>
+                    </ul>
+                </li>
 
-        <li>
-            <a href="#">Projects ▾</a>
-            <ul>
-                <li><a href="projects/projects.html">Projects</a></li>
-                <li><a href="projects/finchverse.html">Finchverse</a></li>
-                <li><a href="projects/hypothermia.html">Hypothermia</a></li>
-                <li><a href="projects/toc.html">TOC</a></li>
-                <li><a href="projects/melancholic.html">Melancholic</a></li>
-            </ul>
-        </li>
+                <li>
+                    <a href="#">Projects ▾</a>
+                    <ul>
+                        <li><a href="projects/projects.html">Projects</a></li>
+                        <li><a href="projects/finchverse.html">Finchverse</a></li>
+                        <li><a href="projects/hypothermia.html">Hypothermia</a></li>
+                        <li><a href="projects/toc.html">TOC</a></li>
+                        <li><a href="projects/melancholic.html">Melancholic</a></li>
+                    </ul>
+                </li>
 
-        <li>
-            <a href="#">Extras ▾</a>
-            <ul>
-                <li><a href="extras/multiverse.html">Multiverse Guide</a></li>
-                <li><a href="extras/characters.html">Character Dictionary</a></li>
-                <li><a href="extras/behind-scenes.html">Behind the Scenes</a></li>
-                <li><a href="extras/tierlist.html">Tier List</a></li>
+                <li>
+                    <a href="#">Extras ▾</a>
+                    <ul>
+                        <li><a href="extras/multiverse.html">Multiverse Guide</a></li>
+                        <li><a href="extras/characters.html">Character Dictionary</a></li>
+                        <li><a href="extras/behind-scenes.html">Behind the Scenes</a></li>
+                        <li><a href="extras/tierlist.html">Tier List</a></li>
+                    </ul>
+                </li>
             </ul>
-            </li>
-        </ul>
+        </div>
     </nav>
-    </header>
+</header>
 
-    <section class="hero">
+<section class="hero">
     <div class="hero-content">
         <h1>SpinoFilms</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <a href="projects.html" class="btn">Explore Projects</a>
     </div>
 </section>
@@ -57,9 +68,8 @@
 <section class="intro">
     <h2>What is SpinoFilms?</h2>
     <p>
-        Spino Films is an independent film production group founded on March 17th 2019. 
-        Born out of a passion for storytelling and creative exploration, Spino Films brings together a diverse group of friends with intrests in filmaking, writing, drawing, and content creation.
-        From action-packed trilogies to innovative comedies, Spino Films continuously pushes the boundries of independent filmaking.
+        Spino Films is an independent film production group founded on March 17th 2019.
+        Born out of a passion for storytelling and creative exploration, Spino Films brings together a diverse group of friends with interests in filmmaking, writing, drawing, and content creation.
     </p>
 </section>
 
@@ -69,24 +79,23 @@
     <div class="preview-grid">
         <a href="finchverse.html" class="preview-card">
             <h3>Finchverse</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            <p>Lorem ipsum dolor sit amet</p>
         </a>
 
         <a href="hypothermia.html" class="preview-card">
             <h3>Hypothermia</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            <p>Lorem ipsum dolor sit amet</p>
         </a>
 
         <a href="toc.html" class="preview-card">
             <h3>TOC</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            <p>Lorem ipsum dolor sit amet</p>
         </a>
 
         <a href="toc.html" class="preview-card">
             <h3>The Hunt</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+            <p>Lorem ipsum dolor sit amet</p>
         </a>
-
     </div>
 </section>
 
@@ -99,16 +108,18 @@
     </div>
 </section>
 
-    <footer class="site-footer">
+<footer class="site-footer">
     <div class="footer-content">
         <a href="https://www.youtube.com/@SpinoFilmsOfficial" target="_blank">
             <img src="images/youtube.png" alt="SpinoFilms YouTube">
         </a>
 
         <p>&copy; 2026 SpinoFilms. All Rights Reserved.</p>
-
         <a href="terms.html" class="footer-link">Terms of Service</a>
     </div>
 </footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
