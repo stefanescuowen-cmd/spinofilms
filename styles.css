@@ -168,50 +168,102 @@ nav ul li:hover ul li {
 }
 
 /* ===== MOBILE NAV ===== */
-
 @media (max-width: 768px) {
 
+    /* Hamburger button */
     .hamburger {
-        display: flex;
-        z-index: 2100;
+        display: flex;                 /* show on mobile */
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        position: fixed;               /* stay visible on top */
+        top: 18px;                     /* adjust to navbar */
+        right: 18px;
+        z-index: 3000;                 /* higher than menu */
     }
 
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Fullscreen mobile menu */
     #nav-links {
-        position: absolute;
-        top: 60px;
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        background: black;
-
+        height: 100%;
+        background: rgba(0,0,0,0.95);
         flex-direction: column;
+        padding-top: 80px; /* push links below navbar */
+        overflow-y: auto;
 
-        /* smooth animation */
-        max-height: 0;
-        overflow: hidden;
         opacity: 0;
-
-        transition: 
-            max-height 0.35s ease,
-            opacity 0.25s ease;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 2500; /* below hamburger */
     }
 
     #nav-links.active {
-        max-height: 500px;
         opacity: 1;
-    }
-
-    nav ul li {
-        width: 100%;
+        pointer-events: auto;
     }
 
     nav ul li a {
-        padding: 16px;
-        border-top: 1px solid rgba(255,255,255,0.1);
+        padding: 20px 24px;
+        font-size: 1.2rem;
+        border: none;
+        color: white;
     }
 
-    /* disable hover dropdown */
-    nav ul li:hover ul {
-        display: none;
+    /* Dropdowns inside mobile menu */
+    nav ul li ul {
+        position: static;       /* inside menu flow */
+        background: none;
+        box-shadow: none;
+        opacity: 1 !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav ul li ul.active {
+        max-height: 500px;      /* enough for links */
+    }
+
+    nav ul li ul li a {
+        padding-left: 40px;
+        background: rgba(255,255,255,0.05);
+        color: white;
+    }
+
+    /* Arrow for toggle */
+    nav ul li a.toggle-submenu {
+        position: relative;
+    }
+
+    nav ul li a.toggle-submenu::after {
+        content: '▸';
+        position: absolute;
+        right: 24px;
+        transition: transform 0.3s ease;
+    }
+
+    nav ul li a.toggle-submenu.active::after {
+        transform: rotate(90deg);
     }
 }
 
