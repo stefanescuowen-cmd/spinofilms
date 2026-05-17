@@ -53,3 +53,4 @@ function setupFilterableCards(containerId) {
 
 setupFilterableCards("character-list");
 setupFilterableCards("project-list");
+
