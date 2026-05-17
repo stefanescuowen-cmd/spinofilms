@@ -354,6 +354,35 @@ p {
     font-weight: bold;
 }
 
+.embed-grid {
+    display: grid;
+    gap: 28px;
+}
+
+.embed-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.embed-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.tier-frame {
+    width: 100%;
+    min-height: 720px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: white;
+}
+
 .page-hero {
     padding: 120px 8% 42px;
 }
@@ -515,7 +544,7 @@ p {
     }
 
     nav ul li a.toggle-submenu::after {
-        content: '▸';
+        content: '>';
         position: absolute;
         right: 24px;
         transition: transform 0.3s ease;
@@ -528,6 +557,15 @@ p {
     .tools,
     .split-layout {
         grid-template-columns: 1fr;
+    }
+
+    .embed-card-header {
+        display: grid;
+        align-items: start;
+    }
+
+    .tier-frame {
+        min-height: 560px;
     }
 
     .button-row {
