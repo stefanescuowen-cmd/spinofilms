@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/logo-nobg.png">
-    <title>Spino Films</title>
+    <title>SpinoFilms</title>
 </head>
 <body>
-
 <header>
     <nav>
         <div class="nav-container">
             <div class="logo"><a href="index.html"><img src="images/logo-nobg.png" alt="SpinoFilms Logo"></a></div>
-
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-
                 <li>
                     <a href="#">About ▾</a>
                     <ul>
@@ -32,18 +26,16 @@
                         <li><a href="about/history.html">History</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="#">Projects ▾</a>
                     <ul>
-                        <li><a href="projects/projects.html">Projects</a></li>
+                        <li><a href="projects/projects.html">All Projects</a></li>
                         <li><a href="projects/finchverse.html">Finchverse</a></li>
                         <li><a href="projects/hypothermia.html">Hypothermia</a></li>
                         <li><a href="projects/toc.html">TOC</a></li>
                         <li><a href="projects/melancholic.html">Melancholic</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="#">Extras ▾</a>
                     <ul>
@@ -58,69 +50,86 @@
     </nav>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>SpinoFilms</h1>
-        <p>This is a template.</p>
-        <a href="projects/projects.html" class="btn">Explore Projects</a>
-    </div>
-</section>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Independent films, shared worlds, unfinished mysteries</p>
+            <h1>SpinoFilms</h1>
+            <p>A hub for the franchises, characters, multiverse codes, members, and behind-the-scenes history of SpinoFilms.</p>
+            <div class="button-row">
+                <a href="projects/projects.html" class="btn">Explore Projects</a>
+                <a href="extras/characters.html" class="btn secondary">Character Dictionary</a>
+            </div>
+        </div>
+    </section>
 
-<section class="intro">
-    <h2>What is SpinoFilms?</h2>
-    <p>
-        Spino Films is an independent film production group founded on March 17th 2019.
-        Born out of a passion for storytelling and creative exploration, Spino Films brings together a diverse group of friends with interests in filmmaking, writing, drawing, and content creation.
-    </p>
-</section>
+    <section class="intro section-band">
+        <div class="section-copy">
+            <h2>What is SpinoFilms?</h2>
+            <p>SpinoFilms is an independent film production group founded on March 17, 2019. The site is designed as the main guide for its films, franchises, cast members, story worlds, and production history.</p>
+        </div>
+    </section>
 
-<section class="previews">
-    <h2>Featured Worlds</h2>
+    <section class="slideshow-section">
+        <h2>Project Reel</h2>
+        <div class="reel" aria-label="Moving slideshow of SpinoFilms projects">
+            <div class="reel-track">
+                <span>Finchverse</span><span>Hypothermia</span><span>TOC</span><span>Melancholic</span><span>The Hunt</span>
+                <span>Finchverse</span><span>Hypothermia</span><span>TOC</span><span>Melancholic</span><span>The Hunt</span>
+            </div>
+        </div>
+    </section>
 
-    <div class="preview-grid">
-        <a href="projects/finchverse.html" class="preview-card">
-            <h3>Finchverse</h3>
-            <p>Lorem ipsum dolor sit amet</p>
-        </a>
+    <section class="previews">
+        <div class="section-heading">
+            <h2>Featured Worlds</h2>
+            <p>Start with a franchise, then jump into the multiverse guide or character dictionary when you need more context.</p>
+        </div>
+        <div class="preview-grid">
+            <a href="projects/finchverse.html" class="preview-card">
+                <div class="image-placeholder">Finchverse Image</div>
+                <h3>Finchverse</h3>
+                <p>Core franchise page with story notes, project placeholders, and universe connections.</p>
+            </a>
+            <a href="projects/hypothermia.html" class="preview-card">
+                <div class="image-placeholder">Hypothermia Image</div>
+                <h3>Hypothermia</h3>
+                <p>A colder, more suspenseful branch of the SpinoFilms project list.</p>
+            </a>
+            <a href="projects/toc.html" class="preview-card">
+                <div class="image-placeholder">TOC Image</div>
+                <h3>TOC</h3>
+                <p>Dedicated space for TOC details, permissions, media, and related notes.</p>
+            </a>
+            <a href="projects/melancholic.html" class="preview-card">
+                <div class="image-placeholder">Melancholic Image</div>
+                <h3>Melancholic</h3>
+                <p>A separate section for Melancholic once its approved content is ready.</p>
+            </a>
+        </div>
+    </section>
 
-        <a href="projects/hypothermia.html" class="preview-card">
-            <h3>Hypothermia</h3>
-            <p>Lorem ipsum dolor sit amet</p>
-        </a>
-
-        <a href="projects/toc.html" class="preview-card">
-            <h3>TOC</h3>
-            <p>Lorem ipsum dolor sit amet</p>
-        </a>
-
-        <a href="projects/toc.html" class="preview-card">
-            <h3>The Hunt</h3>
-            <p>Lorem ipsum dolor sit amet</p>
-        </a>
-    </div>
-</section>
-
-<section class="extras-preview">
-    <h2>Explore More</h2>
-    <div class="extras-links">
-        <a href="extras/multiverse.html">Multiverse Guide</a>
-        <a href="extras/characters.html">Character Dictionary</a>
-        <a href="extras/behind-scenes.html">Behind the Scenes</a>
-    </div>
-</section>
+    <section class="hub-grid">
+        <a href="about/team.html" class="hub-link">Member Info</a>
+        <a href="extras/multiverse.html" class="hub-link">Guide to the Multiverse</a>
+        <a href="extras/behind-scenes.html" class="hub-link">Behind the Scenes</a>
+        <a href="about/history.html" class="hub-link">History of SpinoFilms</a>
+        <a href="extras/tierlist.html" class="hub-link">Tier List Page</a>
+        <a href="about/mission.html" class="hub-link">Mission Statement</a>
+    </section>
+</main>
 
 <footer class="site-footer">
     <div class="footer-content">
-        <a href="https://www.youtube.com/@SpinoFilmsOfficial" target="_blank">
+        <a href="https://www.youtube.com/@SpinoFilmsOfficial" target="_blank" rel="noopener">
             <img src="images/youtube.png" alt="SpinoFilms YouTube">
         </a>
-
         <p>&copy; 2026 SpinoFilms. All Rights Reserved.</p>
+        <p>Contact: <a href="mailto:spinofilms@example.com">spinofilms@example.com</a></p>
         <a href="terms.html" class="footer-link">Terms of Service</a>
     </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
