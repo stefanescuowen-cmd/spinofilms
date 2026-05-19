@@ -573,7 +573,8 @@ p {
     }
 
     nav ul li ul.active {
-        max-height: 520px;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 
     nav ul li ul li a {
